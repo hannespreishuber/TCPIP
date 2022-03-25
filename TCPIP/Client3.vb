@@ -14,14 +14,16 @@ Public Class Client3
 
 
                         Using Fs = New FileStream("c:\temp\black.zip", FileMode.Open, FileAccess.Read)
-                            Using fsreader = New BinaryReader(Fs)
+                            'Using fsreader = New BinaryReader(Fs)
 
-                                While fsreader.BaseStream.Length > fsreader.BaseStream.Position
-                                    writer.Write(fsreader.ReadByte)
-                                    Console.Write("x")
-                                End While
-                            End Using
-
+                            '    While fsreader.BaseStream.Length > fsreader.BaseStream.Position
+                            '        writer.Write(fsreader.ReadByte)
+                            '        Console.Write("x")
+                            '    End While
+                            'End Using
+                            Dim ms = New MemoryStream()
+                            Fs.CopyTo(ms)
+                            netstream.Write(ms.ToArray)
                         End Using
                     End Using
                 End Using
