@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "TCPIP": {
+      "commandName": "Project",
+      "commandLineArgs": "c3"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
