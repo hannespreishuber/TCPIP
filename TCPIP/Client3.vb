@@ -20,7 +20,6 @@ Public Class Client3
                                     writer.Write(fsreader.ReadByte)
                                     Console.Write("x")
                                 End While
-
                             End Using
 
                         End Using
