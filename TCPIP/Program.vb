@@ -32,6 +32,12 @@ Module Program
         ElseIf args.FirstOrDefault = "c3" Then
             Dim s As New Client3
             s.start()
+        ElseIf args.FirstOrDefault = "s4" Then
+            Dim s As New server4
+            s.Listen()
+        ElseIf args.FirstOrDefault = "c4" Then
+            Dim s As New client4
+            s.start()
         Else
 
             Dim t As New Thread(Sub()

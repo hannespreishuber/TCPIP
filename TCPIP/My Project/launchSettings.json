@@ -2,7 +2,7 @@
   "profiles": {
     "TCPIP": {
       "commandName": "Project",
-      "commandLineArgs": "c3"
+      "commandLineArgs": "s4"
     },
     "WSL": {
       "commandName": "WSL2",

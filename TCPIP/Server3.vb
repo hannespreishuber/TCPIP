@@ -15,28 +15,28 @@ Public Class Server3
         writer.AutoFlush = True
         While srv.Connected
             writer.WriteLine("OK" + Environment.NewLine)
-            Using Fs = New FileStream("c:\temp\temp.zip", FileMode.OpenOrCreate, FileAccess.Write)
-                netstream.CopyTo(Fs)
-            End Using
-
-            ' Using bufferStream = New BufferedStream(netstream)
-            'Using reader = New BinaryReader(netstream)
-            '    Dim bytes = reader.BaseStream
-            '    Using Fs = New FileStream("c:\temp\temp.zip", FileMode.OpenOrCreate, FileAccess.Write)
-
-            '        Using fswriter = New BinaryWriter(Fs)
-            '            While bytes.CanRead
-            '                Fs.WriteByte(bytes.ReadByte)
-            '                Console.Write("x")
-            '            End While
-
-            '        End Using
-
-            '    End Using
-
-
-
+            'Using Fs = New FileStream("c:\temp\big3.zip", FileMode.OpenOrCreate, FileAccess.Write)
+            '    netstream.CopyTo(Fs)
             'End Using
+
+            'Using bufferStream = New BufferedStream(netstream)
+            Using reader = New BinaryReader(netstream)
+                    Dim bytes = reader.BaseStream
+                    Using Fs = New FileStream("c:\temp\temp.zip", FileMode.OpenOrCreate, FileAccess.Write)
+
+                        Using fswriter = New BinaryWriter(Fs)
+                            While bytes.CanRead
+                                Fs.WriteByte(bytes.ReadByte)
+                                Console.Write("x")
+                            End While
+
+                        End Using
+
+                    End Using
+
+
+
+                End Using
             ''End Using
         End While
     End Sub
