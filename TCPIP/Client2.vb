@@ -11,7 +11,7 @@ Public Class Client2
                     writer.AutoFlush = True
                     Using reader = New StreamReader(netstream, Encoding.UTF8)
                         For i = 1 To 100
-                            writer.WriteLine(i)
+                            writer.WriteLine($"INC {i}")
                             Console.WriteLine($"Sent: {i}")
 
                             Console.WriteLine($"Received: {reader.ReadLine}")

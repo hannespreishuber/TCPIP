@@ -24,10 +24,9 @@ Public Class client
             Dim port As Int32 = 21001
             Dim client As TcpClient = New TcpClient(server, port)
             Dim stream As NetworkStream = client.GetStream()
-            Dim count As Integer = 0
 
-            While Math.Min(System.Threading.Interlocked.Increment(count), count - 1) < 3
-                Dim data As Byte() = System.Text.Encoding.ASCII.GetBytes(message)
+            While True
+                Dim data As Byte() = System.Text.Encoding.ASCII.GetBytes(message + Date.Now)
                 stream.Write(data, 0, data.Length)
                 Console.WriteLine("Sent: {0}", message)
                 data = New Byte(255) {}

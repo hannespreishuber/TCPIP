@@ -1,0 +1,33 @@
+einfache socket
+
+
+Filewatcher und WSL
+
+/mnt/c
+ cd stateofnet/tcpip/tcpip/bin/debug/net6.0
+
+ sudo apt install dotnet-sdk-6.0
+
+ dotnet tcpip.dll c
+
+netsh interface ipv4 show excludedportrange protocol=tcp
+
+mkdir temp error
+
+UDP
+
+socket( vs udpsocket
+
+
+Small File
+Stream
+
+Big File
+
+Byte weise
+
+
+Big File 
+Blockweise
+
+

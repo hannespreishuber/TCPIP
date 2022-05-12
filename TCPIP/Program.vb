@@ -6,6 +6,9 @@ Module Program
         If args.FirstOrDefault = "c" Then
             Dim c As New client
             c.start()
+        ElseIf args.FirstOrDefault = "0" Then
+            Dim c As New Server0
+            c.Start()
         ElseIf args.FirstOrDefault = "ca" Then
             Dim c As New tcpclientAsync
             c.Start("127.0.0.1", "Helo")
@@ -16,7 +19,7 @@ Module Program
             Dim u As New UdpClnt
 
             u.CallServer()
-        ElseIf args.FirstOrDefault = "w" Then
+        ElseIf args.FirstOrDefault = "w" Then 'todo
             Dim u As New TempWatcher
 
             u.Start()

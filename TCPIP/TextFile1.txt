@@ -1,0 +1,15 @@
+﻿PS C:\Users\hanne> wsl --list 
+
+/mnt/c
+ cd stateofnet/tcpip/tcpip/bin/debug/net6.0
+
+ sudo apt install dotnet-sdk-6.0
+
+ dotnet tcpip.dll c
+
+ PS
+netsh interface ipv4 show excludedportrange protocol=tcp
+
+sudo apt install net-tools ???
+
+mkdir temp error

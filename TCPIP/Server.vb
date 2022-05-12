@@ -8,8 +8,8 @@ Public Class Server
     Public Sub New()
         Dim localAddr = IPAddress.Parse("127.0.0.1")
         server = New TcpListener(localAddr, 21001)
-
         server.Start()
+
         StartListener()
     End Sub
     Public Sub StartListener()

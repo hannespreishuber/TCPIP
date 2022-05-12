@@ -7,6 +7,11 @@
     "WSL": {
       "commandName": "WSL2",
       "distributionName": ""
+    },
+    "WSL : Ubuntu 20.04": {
+      "commandName": "WSL2",
+      "commandLineArgs": "tcpip.dll s3",
+      "distributionName": "Ubuntu-20.04"
     }
   }
 }
